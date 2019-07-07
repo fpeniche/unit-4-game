@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/reset.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/javascript/game.js"></script>
+    <title>Crystals Collector</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+                <button class="btn btn-primary btn-lg">CrystalsCollector!</button>
+        </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>
+                        You will be given a random number at the start of the page.<br>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. <br>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number. <br>The value of each crystal is hidden from you until you click on it.<br>Each time when the game starts, the game will change the values of each crystal<br/>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div id="randomNumber" class="col-lg-3"><b>39</b></div>
+                <div id="win-lose" class="col-lg-3">
+                    <div id="wins" class="col-lg-12">Wins!</div>
+                    <div id="loses" class="col-lg-12">Loses!</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="col-lg-3">
+                        <button id="crystal" class="btn btn-primary btn-lg">
+                         <img class="img thumbnail center-block" src="./assets/images/crystal.jpg" width="100%"/>   
+                        </button>
+                    </div>
+                    <div class="col-lg-3">
+                        <button id="redcrystal" class="btn btn-danger btn-lg">
+                            <img class="img thumbnail center-block" src="./assets/images/redcrystal.jpeg" width="100%"/>
+                        </button>     
+                    </div>
+                    <div class="col-lg-3">
+                        <button id="mineral" class="btn btn-primary btn-lg">
+                            <img class="img thumbnail center-block" src="./assets/images/mineral.png" width="100%"/>
+                        </button>
+                    </div>
+                    <div class="col-lg-3">
+                        <button id="greengem" class="btn btn-danger btn-lg">
+                            <img class="img thumbnail center-block" src="./assets/images/greengem.jpg" width="100%"/>
+                        </button>   
+                    </div> 
+                </div>    
+            </div>
+            <div class="row">
+                <div id="totaltitle" class="col-lg-6">Your total score is:</div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-lg-6"><h1 id="totalscore">0</h1></div>
+            </div>
+    </div>
+
+
+</body>
+</html>
