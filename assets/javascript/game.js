@@ -1,11 +1,11 @@
 // Crystals Collector game... let's see how it goes
-
-//  This code will run as soon as the page loads.
+// This code will run as soon as the page loads
 window.onload = function() {
     $("#crystal").on("click", crystal);
     $("#redcrystal").on("click", redCrystal);
     $("#mineral").on("click", mineral);
     $("#greengem").on("click", greenGem);
+    $("#randomNumber").html(randomNumber);
   };
 
 // variables that will hold random numbers for the crystals
@@ -14,41 +14,56 @@ var redCrystalRandomNumber = Math.floor((Math.random()*12)+1);
 var mineralRandomNumber = Math.floor((Math.random()*12)+1);
 var greenGemRandomNumber = Math.floor((Math.random()*12)+1);
 
-// variable to tell the system the game is running
-var gameRunning = false;
-
 // var to store a new random number every time game starts
-var RandomNumber = Math.floor(19+(Math.random()*101));
+var randomNumber = Math.floor(19+(Math.random()*101));
 
 // other variables needed
-var totalScore;
-var crystalScore;
-var redCrystalScore;
-var mineralScore;
-var greenGemScore;
+var totalScore = 0;
+//var crystalScore = 0;
+//var redCrystalScore;
+//var mineralScore;
+//var greenGemScore;
 
-//function totalScore(){
-  //  sum += $("#totalscore").add(crystalScore+redCrystalScore+mineralScore+greenGemScore);
-// } 
+function myTotalScore() {
+    if(totalScore > randomNumber){
+      $("#randomNumber").html(randomNumber);
+      $("#win-lose").prepend('<h2>"You lost!"</h2>');
+      $("#loses").append('<span>' +1+ '</span>');
+      $("#totalscore").html('0');
+    }
+    else if(totalScore === randomNumber){
+      $("#randomNumber").html(randomNumber);
+      $("#win-lose").prepend('<h2>"You won!"</h2>');
+      $("#wins").append('<span>" 1"</span>');
+      $("#totalscore").html('0');
+    }
+    else{
+      console.log("nothing happened");
+    }
+ } 
 
 function crystal() {
-    gameRunning = true;
-  //  totalSoFar = $("#totalscore").html();
-    crystalScore = $("#totalscore").html(crystalRandomNumber); 
+    totalScore+= crystalRandomNumber;   //this is the same as totalScore=totalScore+crystalRandomNumber;
+    $("#totalscore").html(totalScore);
+    myTotalScore();
 
 }
+
 function redCrystal() {
-    gameRunning = true;
-    redCrystalScore = $("#totalscore").html(redCrystalRandomNumber);
-  //  totalScore(redCrystalScore);
+    totalScore+= redCrystalRandomNumber;
+    $("#totalscore").html(totalScore);
+    myTotalScore();
 }
 function mineral() {
-    gameRunning = true;
-    mineralScore = $("#totalscore").html(mineralRandomNumber);
-  //  totalScore(mineralScore);
+    totalScore+= mineralRandomNumber;
+    $("#totalscore").html(totalScore);
+    myTotalScore();
+  
 }
 function greenGem() {
-    gameRunning = true;
-    greenGemScore = $("#totalscore").html(greenGemRandomNumber);
-  //  totalScore(greenGemScore);
+    totalScore+= greenGemRandomNumber;
+    $("#totalscore").html(totalScore);
+    myTotalScore();
+  
 }
+

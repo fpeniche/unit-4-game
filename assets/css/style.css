@@ -4,32 +4,35 @@
     margin-left: 180px;
 }
 #randomNumber{
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
-    height: 60px;
+    background-color: lightskyblue;
+    height: 100px;
+    margin-right: 1px;
+    margin-left: 15px;
+    margin-bottom: 3px;
+    font-size: 50px;
 }
 
 #win-lose{
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
-    height: 60px;
+    background-color: lightblue;
+    height: 100px;
+    padding-top: 5px;
 }
 
 p{
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
+    background-color: bisque;
 }
 
 #totaltitle{
-    background-color: rgba(0, 255, 255, 0.664);
+    background-color:lightgreen;
+    margin-top: 5px;
+    margin-left: 15px;
 }
 
 #totalscore{
-    background-color: rgba(0, 255, 255, 0.664);
+    background-color: lightgreen    ;
     height: 140px;
     font-size: 30px;
     margin-bottom: 20px;
+    margin-left: 15px;  
+    font-size: 50px;
 }
